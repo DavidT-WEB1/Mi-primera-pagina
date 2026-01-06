@@ -3,11 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <title>David Trujillo | Web Developer</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(120deg, #00c6ff, #0072ff);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 20px;
+      opacity: 0.95;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #0072ff;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-10px);
+    }
+
+    .service h3 {
+      color: #00c6ff;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: #0072ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #005bd1;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>Hola, soy David</h1>
-  <p>Esta es mi primera página web publicada con GitHub Pages.</p>
+  <header>
+    <h1>David Trujillo</h1>
+    <p>Desarrollador Web | Páginas modernas y atractivas</p>
+  </header>
+
+  <section>
+    <h2>Sobre mí</h2>
+    <p style="text-align:center; font-size:18px;">
+      Soy desarrollador web y creo páginas modernas, rápidas y adaptadas
+      a cualquier dispositivo. Ayudo a personas y negocios a tener presencia
+      profesional en internet.
+    </p>
+  </section>
+
+  <section>
+    <h2>Servicios</h2>
+
+    <div class="services">
+      <div class="service">
+        <h3>🌐 Páginas Web</h3>
+        <p>Diseño y desarrollo de páginas web modernas, claras y profesionales.</p>
+      </div>
+
+      <div class="service">
+        <h3>📱 Diseño Responsive</h3>
+        <p>Tu página se verá perfecta en celulares, tablets y computadoras.</p>
+      </div>
+
+      <div class="service">
+        <h3>⚡ Publicación Online</h3>
+        <p>Subo tu página a internet para que cualquier persona pueda verla.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;">
+      <a class="btn" href="#" onclick="contacto()">Contáctame</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 David Trujillo – Web Developer
+  </footer>
+
+  <script>
+    function contacto() {
+      alert("Gracias por tu interés 😊\nPróximamente formulario de contacto.");
+    }
+  </script>
 
 </body>
 </html>
