@@ -5,22 +5,26 @@
   <title>David Trujillo | Web Developer</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      background: #f4f7fb;
       color: #333;
     }
 
     header {
       background: linear-gradient(120deg, #00c6ff, #0072ff);
       color: white;
-      padding: 60px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 40px;
+      font-size: 42px;
       margin-bottom: 10px;
     }
 
@@ -30,61 +34,85 @@
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
+      padding: 60px 20px;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 40px;
       color: #0072ff;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .about {
+      text-align: center;
+      font-size: 18px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
     }
 
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 25px;
+      margin-top: 40px;
     }
 
     .service {
       background: white;
       padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
     }
 
     .service:hover {
       transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     }
 
     .service h3 {
       color: #00c6ff;
+      margin-bottom: 10px;
+      font-size: 22px;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 30px;
-      background: #0072ff;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 18px;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: #005bd1;
+    .service p {
+      font-size: 16px;
+      line-height: 1.5;
     }
 
     footer {
-      background: #222;
+      background: #1f1f1f;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       margin-top: 40px;
+      font-size: 14px;
+    }
+
+    /* Botón WhatsApp */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      font-size: 28px;
+      padding: 15px 18px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      z-index: 1000;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.15);
     }
   </style>
 </head>
@@ -93,15 +121,16 @@
 
   <header>
     <h1>David Trujillo</h1>
-    <p>Desarrollador Web | Páginas modernas y atractivas</p>
+    <p>Desarrollador Web • Páginas modernas y profesionales</p>
   </header>
 
   <section>
     <h2>Sobre mí</h2>
-    <p style="text-align:center; font-size:18px;">
-      Soy desarrollador web y creo páginas modernas, rápidas y adaptadas
-      a cualquier dispositivo. Ayudo a personas y negocios a tener presencia
-      profesional en internet.
+    <p class="about">
+      Soy desarrollador web y me especializo en crear páginas modernas,
+      claras y atractivas para personas y negocios que quieren verse
+      profesionales en internet. Desarrollo sitios rápidos, adaptables
+      a cualquier dispositivo y listos para publicarse.
     </p>
   </section>
 
@@ -111,34 +140,41 @@
     <div class="services">
       <div class="service">
         <h3>🌐 Páginas Web</h3>
-        <p>Diseño y desarrollo de páginas web modernas, claras y profesionales.</p>
+        <p>
+          Diseño y desarrollo de páginas web modernas,
+          limpias y profesionales para tu proyecto o negocio.
+        </p>
       </div>
 
       <div class="service">
         <h3>📱 Diseño Responsive</h3>
-        <p>Tu página se verá perfecta en celulares, tablets y computadoras.</p>
+        <p>
+          Tu página se verá perfecta en celular,
+          tablet y computadora sin errores.
+        </p>
       </div>
 
       <div class="service">
         <h3>⚡ Publicación Online</h3>
-        <p>Subo tu página a internet para que cualquier persona pueda verla.</p>
+        <p>
+          Subo tu página a internet para que
+          cualquier persona pueda acceder a ella.
+        </p>
       </div>
-    </div>
-
-    <div style="text-align:center;">
-      <a class="btn" href="#" onclick="contacto()">Contáctame</a>
     </div>
   </section>
 
   <footer>
-    © 2026 David Trujillo – Web Developer
+    © 2026 David Trujillo — Web Developer
   </footer>
 
-  <script>
-    function contacto() {
-      alert("Gracias por tu interés 😊\nPróximamente formulario de contacto.");
-    }
-  </script>
+  <!-- Botón WhatsApp -->
+  <a href="https://wa.me/529224100878" 
+     class="whatsapp" 
+     target="_blank"
+     title="Contáctame por WhatsApp">
+     💬
+  </a>
 
 </body>
 </html>
